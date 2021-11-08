@@ -33,20 +33,3 @@ cursos.xml enviado no e-mail)
 
 5. Versionamento
 Versionar o projeto no github e enviar a url para avaliação.
-
-6. Muitas vezes precisamos realizar manutenção em códigos de colegas de trabalho, colaboradores que já
-não estão mais na equipe e precisamos entender a lógica usada. Com base nessa premissa aponte no
-código abaixo o que está errado e corrigindo-o para apresentar o valor correto.
-No modelo proposto está sendo apresentado o valor (38), porém a especificação criada informa que deveria
-apresentar o valor (55).
-Código: (escrito usando TypeScript para NodeJS)
-const valores = Array(10, 11, 16, 20, 54, 22, 8, 2);
-let total = 0;
-// tslint:disable-next-line:prefer-for-of
-for (let index = 0; index &lt; valores.length; index++) {
-const element = valores[index];
-if (index % 3 === 0) {
-total += element;
-}
-}
-console.log(&quot;Total: &quot; + total);
