@@ -37,4 +37,4 @@ Route::get('/painel', [HomeController::class, 'index'])->name('home')->middlewar
 
 Route::get('/logout', [HomeController::class, 'logout']);
 
-Route::get('/importarxml', [CursoController::class, 'importarxml']);
+Route::get('/importarxml', [CursoController::class, 'importarxml'])->middleware('auth');

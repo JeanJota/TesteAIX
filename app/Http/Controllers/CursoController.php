@@ -56,17 +56,24 @@ class CursoController extends Controller
 
     public function importarxml()
     {
-        $curso = new curso;
-        
-        $curso->load('cursos.xlm');
+        $xml = simplexml_load_file('../storage/cursos.xml');
 
-        $importarnome = $curso->getElementsByTagName("nome")[0];
-        $importarcodigo = $curso->getElementsByTagName("codigo")[0];
+        foreach($xml->curso as $registro):
 
-        curso::create(['nome'=>$importarnome->nodeValue,'codigo'=>$importarcodigo->nodeValue]);
+            $importarnome = $registro->nome;
+            $importarcodigo = $registro->codigo;
 
-        $curso->save();
-        
+            $cursos = curso::find($importarcodigo);
+
+            if ($cursos == NULL)
+            {
+                $curso = new curso;
+                curso::create(['nome'=>$importarnome,'codigo'=>$importarcodigo]);
+                $curso->save();
+            }
+         
+        endforeach;
+
         $cursos = curso::all();
 
         return view('listarcursos', ['cursos' => $cursos]);
