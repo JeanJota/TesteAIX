@@ -53,4 +53,22 @@ class CursoController extends Controller
 
         return redirect('listarcursos');
     }
+
+    public function importarxml()
+    {
+        $curso = new curso;
+        
+        $curso->load('cursos.xlm');
+
+        $importarnome = $curso->getElementsByTagName("nome")[0];
+        $importarcodigo = $curso->getElementsByTagName("codigo")[0];
+
+        curso::create(['nome'=>$importarnome->nodeValue,'codigo'=>$importarcodigo->nodeValue]);
+
+        $curso->save();
+        
+        $cursos = curso::all();
+
+        return view('listarcursos', ['cursos' => $cursos]);
+    }
 }

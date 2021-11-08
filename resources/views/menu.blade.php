@@ -48,7 +48,7 @@
                                         <li><a href="cadastrarcurso">Cadastrar Curso</a></li>
                                         <li><a href="listaralunos">Listar Alunos</a></li>
                                         <li><a href="listarcursos">Listar Cursos</a></li>
-                                        <li><a href="importarcursos">Importar Cursos XML</a></li>
+                                        <li><a href="importarxml">Importar Cursos XML</a></li>
                                         <li><a href="logout">Sair do Sistema</a></li>
                                     </ul>
                                 </div>
@@ -67,7 +67,7 @@
                     <li><a href="cadastrarcurso" aria-expanded="false"><i class="mdi mdi-file-document-box"></i><span class="nav-text">Cadastrar Cursos</span></a></li>
                     <li><a href="listaralunos" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Listar Alunos</span></a></li>
                     <li><a href="listarcursos" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Listar Cursos</span></a></li>
-                    <li><a href="importarcursos" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Importar Cursos XML</span></a></li>
+                    <li><a href="importarxml" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Importar Cursos XML</span></a></li>
                     <li><a href="logout" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Sair do Sistema</span></a></li>
                 </ul>
             </div>
