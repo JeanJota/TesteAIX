@@ -4,7 +4,7 @@
                 <div class="row justify-content-between mb-4 mt-4">
 					<div class="col-xl-4 text-left">
 						<h2 class="page-heading">AIX Sistemas</h2>
-                        <p class="mb-0">{{ $admins->nome }}</p>                                  
+                        <p class="mb-0">Administrador</p>                                  
                     </div>                        
                 </div>
                 <div class="row">

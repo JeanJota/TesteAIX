@@ -55,7 +55,7 @@ class AlunoController extends Controller
 
     public function show()
     {
-        
+        return view('cadastraraluno');
     }
 
     public function edit($id)

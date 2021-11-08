@@ -30,7 +30,7 @@ class CursoController extends Controller
 
     public function show()
     {
-        
+        return view('cadastrarcurso');
     }
 
     public function edit($id)

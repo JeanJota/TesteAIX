@@ -23,20 +23,15 @@
                             <div class="text-center my-3">
                                 <h4 class="mb-0 p-2"><strong>Administração</strong></h4>
                             </div>
-                            @if(Session::get('Sucesso'))
-                            {{ Session::get(Sucesso) }}
-                            @endif
-                            @if(Session::get('Vixe'))
-                            {{ Session::get(Vixe) }}
-                            @endif
+                            
                             <div class="card-body">
-                                <form action="{{ route('admins.login') }}" method="POST">
+                                <form action="{{ route('login') }}" method="POST">
                                     @csrf
                                     <div class="form-group mb-4">
                                         <input type="email" class="form-control" name="email" placeholder="admin@aixsistemas.com.br" value="admin@aixsistemas.com.br{{ old('email') }}" >
                                     </div>
                                     <div class="form-group mb-4">
-                                        <input type="password" class="form-control" name="senha" placeholder="Chave de Acesso" value="123456{{ old('senha') }}">
+                                        <input type="password" class="form-control" name="password" placeholder="Chave de Acesso" value="123456{{ old('senha') }}">
                                     </div>
                                     <button class="btn btn-primary btn-block border-0" type="submit">Entrar</button>
                                 </form>

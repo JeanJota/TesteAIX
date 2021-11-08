@@ -1,21 +1,15 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [AdminController::class, 'login']);
-
-Route::any('painel', [AdminController::class, 'login'])->name('admins.login');
-
-Route::get('logout', [AdminController::class, 'logout'])->name('logout');
-
-Route::get('cadastraraluno', [AdminController::class, 'cadastraraluno']);//->middleware('Auth');
+Route::get('cadastraraluno', [AlunoController::class, 'show']);
 
 Route::post('criaraluno', [AlunoController::class, 'create'])->name('aluno.create');
 
-Route::get('cadastrarcurso', [AdminController::class, 'cadastrarcurso']);
+Route::get('cadastrarcurso', [CursoController::class, 'show']);
 
 Route::post('criarcurso', [CursoController::class, 'create'])->name('curso.create');
 
@@ -34,3 +28,11 @@ Route::delete('curso/{id}', [CursoController::class, 'destroy']);
 Route::get('curso/{id}', [CursoController::class, 'edit'])->name('curso.edit');
 
 Route::put('curso/{id}', [CursoController::class, 'update']);
+
+Auth::routes(['register' => false]);
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/painel', [HomeController::class, 'index'])->name('home');
+
+Route::get('/logout', [HomeController::class, 'logout']);
