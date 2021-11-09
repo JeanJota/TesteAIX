@@ -10,32 +10,18 @@
                 <div class="row">
                     <div class="col-xl-12 col-xxl-12">
                         <div class="row">
-                            <div class="col-sm-6 col-xxl-6 col-xl-3">
+                            <div class="col-sm-12 col-xxl-12 col-xl-12">
                                 <div class="card stat-widget-one bg-btc">
                                     <div class="card-body">
                                         <div class="row justify-content-between">
                                             <div class="col-auto">
-                                                <h4 class="mb-3">Total de alunos</h4>
-                                                
-                                                <h3 class="mb-3"><span class="counter">123</span> Alunos</h3>
+                                                <h4 class="mb-3">Teste para AIX Sistemas</h4>                                                
+                                                <p>Projeto realizado e versionado no GitHub: <a href="https://github.com/JeanJota/TesteAIX">GitHub JeanJota</a></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 col-xxl-6 col-xl-3">
-                                <div class="card stat-widget-one bg-eth">
-                                    <div class="card-body">
-                                        <div class="row justify-content-between">
-                                            <div class="col-auto">
-                                                <h4 class="mb-3">Total de cursos</h4>
-                                                
-                                                <h3 class="mb-3">54 <span class="counter">Cursos</span></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                            
+                            </div>                             
                         </div>
                     </div>                    
                 </div>
