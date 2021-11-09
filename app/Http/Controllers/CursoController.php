@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\curso;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Print_;
+use PhpParser\Node\Stmt\Echo_;
 
 class CursoController extends Controller
 {
@@ -60,16 +62,20 @@ class CursoController extends Controller
 
         foreach($xml->curso as $registro):
 
-            $importarnome = $registro->nome;
             $importarcodigo = $registro->codigo;
+            $importarnome = $registro->nome;
 
-            $cursos = curso::find($importarcodigo);
-
-            if ($cursos == NULL)
+            if (curso::where('codigo',$importarcodigo)->first()){}
+            else
             {
-                $curso = new curso;
-                curso::create(['nome'=>$importarnome,'codigo'=>$importarcodigo]);
-                $curso->save();
+                if ($importarcodigo == "" or $importarcodigo == NULL){}
+                elseif ($importarnome === "" or $importarnome === NULL){}
+                else
+                {
+                    $curso = new curso;
+                    curso::create(['codigo'=>$importarcodigo, 'nome'=>$importarnome]);
+                    $curso->save();
+                }
             }
          
         endforeach;
